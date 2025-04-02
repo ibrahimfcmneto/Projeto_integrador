@@ -1,0 +1,95 @@
+# Vamos criar um arquivo .txt com os comandos Git organizados e explicados
+git_commands = """
+✅ CONFIGURAÇÃO INICIAL DO GIT
+git config --global user.name "Seu Nome"
+# Define seu nome nas configurações do Git
+
+git config --global user.email "seu@email.com"
+# Define seu e-mail usado para registrar os commits
+
+📁 TRABALHANDO COM REPOSITÓRIOS
+git init
+# Cria um repositório Git do zero na pasta atual
+
+git clone [URL]
+# Clona (copia) um repositório existente da internet (ex: GitHub) para seu computador
+
+💾 ADICIONANDO E SALVANDO ALTERAÇÕES
+git add .
+# Adiciona todas as mudanças feitas (em todos os arquivos)
+
+git add nome_do_arquivo.ext
+# Adiciona um arquivo específico
+
+git commit -m "mensagem"
+# Salva as mudanças com uma mensagem explicando o que foi feito
+
+🔍 VERIFICANDO STATUS E HISTÓRICO
+git status
+# Mostra o que foi modificado, adicionado ou ainda não salvo
+
+git log
+# Exibe o histórico de todos os commits do projeto
+
+🔄 ENVIANDO E RECEBENDO DO REPOSITÓRIO REMOTO
+git push
+# Envia seus commits locais para o repositório remoto (ex: GitHub)
+
+git pull
+# Puxa e atualiza seu projeto com as últimas mudanças do repositório remoto
+
+git fetch
+# Busca as atualizações do repositório remoto (sem aplicar)
+
+🌿 BRANCHES (RAMIFICAÇÕES)
+git branch
+# Lista todas as branches existentes
+
+git branch nome_da_branch
+# Cria uma nova branch
+
+git checkout nome_da_branch
+# Troca para uma branch existente
+
+git checkout -b nome_da_branch
+# Cria e já muda para a nova branch
+
+git merge nome_da_branch
+# Junta o conteúdo de outra branch na branch atual
+
+🧼 DESFAZENDO ALTERAÇÕES
+git reset nome_do_arquivo.ext
+# Remove o arquivo da área de staging (antes do commit)
+
+git checkout -- nome_do_arquivo.ext
+# Desfaz as alterações feitas no arquivo (volta ao último commit)
+
+git reset --hard
+# Volta tudo ao último commit (desfaz todas as alterações locais)
+
+git revert id_do_commit
+# Cria um novo commit que desfaz um commit anterior (sem apagar histórico)
+
+📌 OUTROS COMANDOS ÚTEIS
+git remote -v
+# Mostra os repositórios remotos conectados
+
+git rm nome_do_arquivo.ext
+# Remove o arquivo do projeto e marca para exclusão no próximo commit
+
+git diff
+# Mostra as diferenças entre os arquivos modificados
+
+git stash
+# Guarda temporariamente alterações que você não quer commitar agora
+
+git stash pop
+# Recupera o que foi guardado com git stash
+"""
+
+# Salvar o conteúdo em um arquivo .txt
+file_path = "/mnt/data/comandos_git_explicados.txt"
+with open(file_path, "w", encoding="utf-8") as file:
+    file.write(git_commands)
+
+file_path
